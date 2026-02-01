@@ -82,29 +82,24 @@
     margin-bottom: 20px; /* separación entre párrafos */
 	
 	@media (max-width: 768px) {
-    .section {
-        flex-direction: column !important; /* Pon las imágenes arriba y el texto debajo */
+    body {
+        font-size: 16px;
         padding: 20px;
     }
 
-    .section img,
-    .section .text {
-        width: 100%; /* Ocupa todo el ancho */
-    }
-
-    .section .text {
-        padding: 10px 0;
-    }
-
-    header {
-        flex-direction: column; /* Si quieres que el logo y el nav estén uno debajo del otro */
-        padding: 10px 0;
-    }
-
     header img {
-        height: 80px; /* Ajusta tamaño del logo */
+        height: 60px;
     }
 
+    .section {
+        flex-direction: column; /* las imágenes van encima del texto */
+        padding: 20px;
+    }
+
+    .section img, .section .text {
+        width: 100%; /* ocupan todo el ancho en móvil */
+        padding: 10px 0;
+    }
 }
 
     </style>
