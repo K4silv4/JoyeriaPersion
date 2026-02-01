@@ -68,8 +68,8 @@ nav a {
     }
 
     .item:nth-child(2) {
-        top: 80px;
-        left: 500px;
+        top: 900px;
+        left: 20px;
         width: 150px;
         height: 180px;
     }
@@ -82,15 +82,15 @@ nav a {
     }
 
     .item:nth-child(4) {
-        top: 250px;
-        left: 650px;
+        top: 750px;
+        left: 250px;
         width: 150px;
         height: 180px;
     }
 
     .item:nth-child(5) {
-        top: 200px;
-        left: 350px;
+        top: 600px;
+        left: 150px;
         width: 150px;
         height: 180px;
     }
@@ -103,9 +103,31 @@ nav a {
     }
 
     .item:nth-child(7) {
-        top: 0px;
-        left: 650px;
+        top: 450px;
+        left: 10px;
         width: 150px;
         height: 180px;
     }
+	 header {
+        flex-direction: column; /* apila logo y nav verticalmente */
+        align-items: center;
+        padding: 20px 20px; /* menos padding que en escritorio */
+    }
+
+    .logo {
+        font-size: 20px; /* más pequeño para móvil */
+        margin-bottom: 10px; /* separación entre logo y nav */
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap; /* que los enlaces bajen de línea si no caben */
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 5px 10px; /* menos margen entre enlaces */
+        font-size: 16px; /* un poco más grande para tocar en móvil */
+    }
+
 }

@@ -82,36 +82,55 @@
     margin-bottom: 20px; /* separación entre párrafos */
 	
 @media (max-width: 768px) {
+    /* HEADER */
+    header {
+        padding: 15px 20px;
+    }
+
     header img {
-        height: 60px;
+        height: 60px; /* logo más pequeño */
+    }
+
+    nav a {
+        margin-left: 15px;
+        font-size: 12px; /* enlaces más pequeños */
     }
 
     .spacer {
-        height: 70px;
+        height: 70px; /* espacio debajo del header */
     }
 
+    /* SECCIONES */
     .section {
-        flex-direction: column !important; /* apilar imagen y texto */
+        flex-direction: column !important; /* imagen arriba, texto abajo */
+        align-items: center; /* centra todo horizontalmente */
+        text-align: center;  /* centra el texto */
         padding: 20px;
         min-height: auto;
     }
 
-    .section img, .section .text {
-        width: 100%;
-        padding: 10px 0;
+    .section img {
+        width: 90%;       /* ocupa casi todo el ancho del móvil */
+        max-height: 300px; /* limita altura de imagen */
+        object-fit: cover; /* mantiene proporción */
+        border-radius: 10px;
+        margin-bottom: 15px; /* espacio entre imagen y texto */
     }
 
     .section .text {
+        width: 90%;
+        padding: 10px 0;
         font-size: 16px;
-        text-align: center;
     }
 
     .section .text h2 {
         font-size: 22px;
+        margin-bottom: 10px;
     }
 
     .section .text p {
         font-size: 14px;
+        line-height: 1.6;
     }
 }
 
