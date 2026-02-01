@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* Barra superior */
+ header {
+    width: 100%;
+    background-color: transparent; /* transparente */
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;
+    padding: 15px 0;
+    position: absolute; /* fijo en la parte superior */
+    top: 0;
+    left: 0; /* asegúrate de que empiece en la esquina */
+    z-index: 1000;
+	 
+}
+        
+        header img {
+            height: 100px;
+        }
+
+        
+
+/* Contenedor principal */
+.container {
+    max-width: 1100px;
+    margin: 150px auto;
+    display: flex;
+    gap: 80px;
+    padding: 0 20px;
+}
+
+/* Columna izquierda */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-data {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.contact-data li {
+    margin-bottom: 10px;
+}
+
+.schedule {
+    font-size: 14px;
+    color: #555;
+}
+
+.social {
+    margin-top: 30px;
+}
+
+.social span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.icons span {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Columna derecha (formulario) */
+.contact-form {
+    flex: 1;
+    background: #efefef;
+    padding: 40px;
+}
+
+.contact-form h3 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #999;
+    background: transparent;
+    padding: 8px 0;
+    margin-top: 5px;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.checkbox {
+    font-size: 13px;
+}
+
+.checkbox input {
+    width: auto;
+    margin-right: 5px;
+}
+
+.checkbox a {
+    color: #000;
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+       header {
+    width: 100%;
+    background-color: transparent; /* transparente */
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;
+    padding: 15px 0;
+    position: absolute; /* fijo en la parte superior */
+    top: 0;
+    left: 0; /* asegúrate de que empiece en la esquina */
+    z-index: 1000;
+	 
+}
+        
+        header img {
+            height: 100px;
+        }
+
+        .spacer {
+            height: 100px; /* espacio para el header */
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            min-height: 100vh;
+            opacity: 0; /* para animar */
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .section img {
+            width: 45%;
+            border-radius: 10px;
+        }
+
+        .section .text {
+            width: 45%;
+            padding: 20px;
+        }
+
+        .section .text h2 {
+            margin-top: 0;
+        }
+		.section .text {
+    width: 45%;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif; /* letra clara y moderna */
+    font-weight: 300; /* fina */
+    line-height: 1.8; /* separación entre líneas */
+    color: white;
+}
+
+.section .text p {
+    margin-bottom: 20px; /* separación entre párrafos */
+	
+	@media screen and (max-width: 768px) {
+    .section {
+        flex-direction: column !important; /* apilar imagen y texto */
+        padding: 20px;
+    }
+
+    .section img {
+        width: 90%; /* ocupar casi todo el ancho */
+        margin-bottom: 20px; /* separar del texto */
+    }
+
+    .section .text {
+        width: 100%;
+        padding: 0;
+    }
+
+    header img {
+        height: 70px; /* logo más pequeño en móvil */
+    }
+
+    body, html {
+        font-size: 16px; /* ajustar tamaño de letra para pantallas pequeñas */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="ImagenesPersion/joyalogo.png" alt="Logo Joya">
+</header>
+
+<div class="spacer"></div>
+
+<!-- Sección 1 -->
+<div class="section">
+    <img src="ImagenesPersion/sobre1.jpg" alt="Foto 1">
+    <div class="text">
+        <h2>Nuestra Historia</h2>
+        <p>Lo que comenzó como un simple hobby hace varios años, poco a poco se convirtió
+		en una verdadera pasión. Empecé explorando el mundo de la joyería de manera autodidacta,
+		experimentando con diferentes materiales y diseños sin presión ni expectativas.
+		Cada pieza que creaba era una oportunidad de aprender, innovar y dar vida a algo único.
+
+Con el tiempo, esa afición se transformó en un proyecto más serio: una marca que refleja creatividad,
+ dedicación y amor por los detalles. Hoy, seguimos creciendo, pero nunca olvidamos aquel entusiasmo
+ inicial que nos impulsó a dar el primer paso. Cada joya que diseñamos lleva consigo esa historia de
+ pasión, esfuerzo y compromiso con la excelencia.</p>
+    </div>
+</div>
+
+<!-- Sección 2 -->
+<div class="section">
+    <img src="ImagenesPersion/sobre2.jpg" alt="Foto 2">
+    <div class="text">
+        <h2>Nuestros Valores</h2>
+        <p>"Nuestra joyería nace de la pasión y la libertad de un creador que no conoce límites.
+		Cada pieza refleja su alegría, su energía positiva y su valentía: sin miedo al éxito, sin frenos, 
+		siempre innovando y contagiando entusiasmo en cada diseño."</p>
+    </div>
+</div>
+
+<!-- Sección 3 -->
+<div class="section">
+    <img src="ImagenesPersion/sobre3.jpg" alt="Foto 3">
+    <div class="text">
+        <h2>El Equipo</h2>
+        <p>Aunque actualmente soy el único creador detrás de nuestra joyería, cada diseño refleja dedicación y pasión.
+		Mi objetivo es seguir aprendiendo y expandiendo mis conocimientos, para que cada pieza sea más innovadora y única,
+		y poder crecer junto a quienes confían en mi trabajo</p>
+    </div>
+</div>
+
+<!-- Sección 4 -->
+<div class="section">
+    <img src="ImagenesPersion/sobre4.jpg" alt="Foto 4">
+    <div class="text">
+        <h2>Nuestros Proyectos</h2>
+        <p>En nuestros proyectos buscamos romper moldes y crear cosas que nadie haya visto antes.
+		Pasamos de lo casual a lo radical, explorando ideas innovadoras que desafían lo convencional 
+		y muestran nuestra pasión por la creatividad sin límites.</p>
+    </div>
+</div>
+
+<script>
+    // Animación al hacer scroll
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+</body>
+</html>
