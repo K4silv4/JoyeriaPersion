@@ -77,7 +77,10 @@ nav a {
 @media (max-width: 768px) {
     body {
         font-size: 16px;
-        padding: 20px;
+        
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
     }
 
     header img {

@@ -81,24 +81,37 @@
 .section .text p {
     margin-bottom: 20px; /* separación entre párrafos */
 	
-	@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        padding: 20px;
-    }
-
+@media (max-width: 768px) {
     header img {
         height: 60px;
     }
 
+    .spacer {
+        height: 70px;
+    }
+
     .section {
-        flex-direction: column; /* las imágenes van encima del texto */
+        flex-direction: column !important; /* apilar imagen y texto */
         padding: 20px;
+        min-height: auto;
     }
 
     .section img, .section .text {
-        width: 100%; /* ocupan todo el ancho en móvil */
+        width: 100%;
         padding: 10px 0;
+    }
+
+    .section .text {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .section .text h2 {
+        font-size: 22px;
+    }
+
+    .section .text p {
+        font-size: 14px;
     }
 }
 
