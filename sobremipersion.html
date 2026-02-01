@@ -82,113 +82,83 @@
     margin-bottom: 20px; /* separación entre párrafos */
 }
 	
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
+    /* RESET GENERAL */
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-        background-color: #111;
+        background-color: #000;
         font-size: 16px;
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
 
     /* HEADER */
     header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #000;
-        padding: 15px 10px;
         position: relative;
-        text-align: center;
+        padding: 20px 0;
     }
 
     header img {
         height: 70px;
-        margin-bottom: 10px;
     }
 
-    nav {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+    .spacer {
+        height: 40px;
     }
 
-    nav a {
-        font-size: 18px;
-        color: #ffd700;
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    /* SECCIONES */
+    /* SECCIONES → SIEMPRE EN COLUMNA */
     .section {
-        flex-direction: column !important; /* todo vertical */
-        padding: 20px;
-        margin: 15px;
-        border-radius: 15px;
-        background-color: #222;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 15px;
+        margin: 0;
+        min-height: auto;
+        background: none;
+        box-shadow: none;
     }
 
-    /* TEXTO ARRIBA */
-    .section .text {
-        order: -1; /* fuerza que el texto quede arriba */
+    /* DESACTIVAMOS CUALQUIER INVERSIÓN */
+    .section:nth-child(even) {
+        flex-direction: column !important;
+    }
+
+    /* IMAGEN ARRIBA */
+    .section img {
         width: 100%;
-        text-align: center;
-        padding: 15px 10px;
-        color: #fff;
+        max-width: 420px;
+        margin: 0 auto 20px auto;
+        border-radius: 12px;
+        display: block;
+    }
+
+    /* TEXTO ABAJO */
+    .section .text {
+        width: 100%;
+        padding: 0 10px;
+        text-align: left;
         font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        line-height: 1.6;
+        font-weight: 300;
+        line-height: 1.8;
+        color: #fff;
     }
 
     .section .text h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-        color: #ffd700; /* color llamativo para títulos */
+        font-size: 22px;
+        margin-bottom: 12px;
+        color: #fff;
     }
 
     .section .text p {
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-    /* IMAGEN ABAJO */
-    .section img {
-        width: 90%;
-        max-width: 400px;
-        border-radius: 15px;
-        margin: 10px auto 20px auto;
-        order: 1; /* imagen después del texto */
-        display: block;
-    }
-
-    /* BOTONES OPCIONALES */
-    .section button {
-        display: block;
-        margin: 10px auto;
-        padding: 12px 25px;
-        font-size: 16px;
-        border-radius: 10px;
-        border: none;
-        background-color: #ffd700;
-        color: #000;
-        cursor: pointer;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-
-    .section button:hover {
-        background-color: #e5c100;
-    }
-
-    /* Animación más suave en móvil */
-    .section.visible {
-        transform: translateY(0);
-        opacity: 1;
-        transition: all 0.8s ease-out;
+        font-size: 15px;
+        margin-bottom: 18px;
     }
 }
-
     </style>
 </head>
 <body>
