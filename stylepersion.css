@@ -75,25 +75,26 @@ nav a {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .section {
+        flex-direction: column !important; /* Pon las imágenes arriba y el texto debajo */
+        padding: 20px;
+    }
+
+    .section img,
+    .section .text {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    .section .text {
+        padding: 10px 0;
+    }
+
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Si quieres que el logo y el nav estén uno debajo del otro */
+        padding: 10px 0;
     }
 
-    nav {
-        margin-top: 20px;
-    }
-
-    .gallery {
-        padding: 40px 20px;
-    }
-
-    .item,
-    .item-left,
-    .item-right,
-    .item-center {
-        margin-left: 0;
-        margin-right: 0;
-        max-width: 100%;
+    header img {
+        height: 80px; /* Ajusta tamaño del logo */
     }
 }

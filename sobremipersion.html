@@ -81,29 +81,30 @@
 .section .text p {
     margin-bottom: 20px; /* separación entre párrafos */
 	
-	@media screen and (max-width: 768px) {
+	@media (max-width: 768px) {
     .section {
-        flex-direction: column !important; /* apilar imagen y texto */
+        flex-direction: column !important; /* Pon las imágenes arriba y el texto debajo */
         padding: 20px;
     }
 
-    .section img {
-        width: 90%; /* ocupar casi todo el ancho */
-        margin-bottom: 20px; /* separar del texto */
+    .section img,
+    .section .text {
+        width: 100%; /* Ocupa todo el ancho */
     }
 
     .section .text {
-        width: 100%;
-        padding: 0;
+        padding: 10px 0;
+    }
+
+    header {
+        flex-direction: column; /* Si quieres que el logo y el nav estén uno debajo del otro */
+        padding: 10px 0;
     }
 
     header img {
-        height: 70px; /* logo más pequeño en móvil */
+        height: 80px; /* Ajusta tamaño del logo */
     }
 
-    body, html {
-        font-size: 16px; /* ajustar tamaño de letra para pantallas pequeñas */
-    }
 }
 
     </style>
