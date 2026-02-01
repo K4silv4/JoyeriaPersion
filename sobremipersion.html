@@ -82,43 +82,70 @@
     margin-bottom: 20px; /* separación entre párrafos */
 	
 @media (max-width: 768px) {
-
-    /* Header más pequeño y centrado */
-    header img {
-        height: 60px;
-    }
-
-    .spacer {
-        height: 70px;
-    }
-
-    /* Apilar secciones verticalmente */
-    .section {
-        flex-direction: column !important; /* fuerza apilado */
-        padding: 20px;
-        min-height: auto; /* elimina altura de escritorio */
-    }
-
-    .section img, 
-    .section .text {
-        width: 100%; /* ancho completo */
-        padding: 10px 0;
-    }
-
-    /* Centrar el texto y ajustar tamaño */
-    .section .text {
+    body {
+        background-color: #111; /* fondo más oscuro para móvil */
         font-size: 16px;
+    }
+
+    /* Header simplificado */
+    header {
+        flex-direction: column;
+        padding: 20px;
         text-align: center;
+        position: relative;
+    }
+
+    header img {
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 16px;
+        color: #f0f0f0;
+    }
+
+    /* Secciones completamente verticales */
+    .section {
+        flex-direction: column !important;
+        padding: 30px 20px;
+        min-height: auto;
+        background-color: #222; /* sección con fondo diferente */
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+
+    .section img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .section .text {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
     }
 
     .section .text h2 {
-        font-size: 22px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
     .section .text p {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 10px;
     }
 }
 

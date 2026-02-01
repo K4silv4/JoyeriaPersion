@@ -105,8 +105,8 @@ nav a {
     .item:nth-child(7) {
         top: 450px;
         left: 10px;
-        width: 120px;
-        height: 150px;
+        width: 100px;
+        height: 130px;
     }
 	 header {
         flex-direction: column; /* apila logo y nav verticalmente */
