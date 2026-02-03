@@ -116,7 +116,7 @@ nav a:hover {
     }
 
     .item p {
-        font-size: 32px;
+        font-size: 12px;
     }
 	    /* HEADER */
     header {
@@ -126,14 +126,14 @@ nav a:hover {
 
     /* LOGO */
     .logo {
-        font-size: 24px;          /* más pequeño en móvil */
+        font-size: 56px;          /* más pequeño en móvil */
         margin-bottom: 10px;      /* separación del nav */
     }
 
     /* ENLACES */
     nav a {
-        font-size: 32px;          /* más legible sin ser gigantes */
+        font-size: 48px;          /* más legible sin ser gigantes */
         margin: 5px 10px;         /* menos separación entre enlaces */
     }
-
+}
 }
