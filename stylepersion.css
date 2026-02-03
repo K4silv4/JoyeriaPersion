@@ -127,7 +127,7 @@ nav a:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
+        gap: 50px;
     }
 
     nav a {

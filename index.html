@@ -128,23 +128,24 @@ document.querySelectorAll('.item').forEach(item => {
         }
     });
 
-     // MÓVIL: touch hover (deslizando)
-    item.addEventListener('touchstart', e => {
+    // MÓVIL: tap
+    item.addEventListener('click', () => {
         if (!window.matchMedia('(hover: hover)').matches) {
-            e.preventDefault(); // evita tap normal
+
+            // Pausar otros vídeos
+            document.querySelectorAll('.item video').forEach(v => {
+                if (v !== video) {
+                    v.pause();
+                    v.currentTime = 0;
+                    v.style.opacity = 0;
+                    v.closest('.item').querySelector('img').style.opacity = 1;
+                }
+            });
+
             img.style.opacity = 0;
             video.style.opacity = 1;
             video.currentTime = 0;
             video.play();
-        }
-    });
-
-    item.addEventListener('touchend', e => {
-        if (!window.matchMedia('(hover: hover)').matches) {
-            img.style.opacity = 1;
-            video.pause();
-            video.currentTime = 0;
-            video.style.opacity = 0;
         }
     });
 });
