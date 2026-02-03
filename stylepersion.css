@@ -70,7 +70,7 @@ nav a:hover {
 
 .item p {
     margin-top: 12px;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     color: #555;
     font-weight: 500;
@@ -91,7 +91,7 @@ nav a:hover {
 /* TEXTO */
 .item p {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: none;
     letter-spacing: 1px;
 }
@@ -127,7 +127,7 @@ nav a:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 30px;
     }
 
     nav a {
@@ -143,6 +143,6 @@ nav a:hover {
     }
 
     .item p {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
