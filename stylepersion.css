@@ -109,6 +109,33 @@ nav a:hover {
 
 /* Responsive móvil */
 @media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px 20px;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 48px !important;
+        margin-bottom: 10px;
+        text-transform: none !important;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 24px !important;
+        margin: 0;
+        text-transform: none !important;
+    }
+
     .gallery {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -116,24 +143,6 @@ nav a:hover {
     }
 
     .item p {
-        font-size: 12px;
+        font-size: 14px;
     }
-	    /* HEADER */
-    header {
-        flex-direction: column;  /* apila logo y nav */
-        padding: 20px 20px;      /* menos espacio que en escritorio */
-    }
-
-    /* LOGO */
-    .logo {
-        font-size: 48px;          /* más pequeño en móvil */
-        margin-bottom: 10px;      /* separación del nav */
-    }
-
-    /* ENLACES */
-    nav a {
-        font-size: 24px;          /* más legible sin ser gigantes */
-        margin: 5px 10px;         /* menos separación entre enlaces */
-    }
-
 }
