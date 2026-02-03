@@ -116,7 +116,7 @@ nav a:hover {
     }
 
     .item p {
-        font-size: 12px;
+        font-size: 32px;
     }
 	    /* HEADER */
     header {
@@ -132,7 +132,7 @@ nav a:hover {
 
     /* ENLACES */
     nav a {
-        font-size: 16px;          /* más legible sin ser gigantes */
+        font-size: 32px;          /* más legible sin ser gigantes */
         margin: 5px 10px;         /* menos separación entre enlaces */
     }
 
