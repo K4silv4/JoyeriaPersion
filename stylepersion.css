@@ -118,4 +118,22 @@ nav a:hover {
     .item p {
         font-size: 12px;
     }
+	    /* HEADER */
+    header {
+        flex-direction: column;  /* apila logo y nav */
+        padding: 20px 20px;      /* menos espacio que en escritorio */
+    }
+
+    /* LOGO */
+    .logo {
+        font-size: 24px;          /* más pequeño en móvil */
+        margin-bottom: 10px;      /* separación del nav */
+    }
+
+    /* ENLACES */
+    nav a {
+        font-size: 16px;          /* más legible sin ser gigantes */
+        margin: 5px 10px;         /* menos separación entre enlaces */
+    }
+
 }
