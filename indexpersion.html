@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <link rel="stylesheet" href="stylepersion.css">
+	<link href="https://fonts.cdnfonts.com/css/luxurious-script" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+
+
 <body>
 
 <header>
-    <div class="logo">PERSION</div>
+    <div class="logo">Persion</div>
     <nav>
-        <a href="sobremipersion.html">ABOUT</a>
-        <a href="contactopersion.html">CONTACT</a>
+        <a href="sobremipersion.html">About</a>
+        <a href="contactopersion.html">Contact</a>
         
     </nav>
 </header>
@@ -20,41 +24,131 @@
 <main class="gallery">
 
     <div class="item">
+    <div class="media">
         <img src="ImagenesPersion/persion1.jpg" alt="">
-        <p>anillo inspirado en la edad medieval</p>
+        <video muted loop playsinline preload="auto">
+            <source src="ImagenesPersion/persion1.mp4" type="video/mp4">
+        </video>
     </div>
+    <p>Anillo inspirado en la edad medieval</p>
+</div>
 
-    <div class="item">
+   <div class="item">
+    <div class="media">
         <img src="ImagenesPersion/persion2.jpg" alt="">
-        <p>anillo de plata con diamante incrustado en forma</p>
+        <video muted loop playsinline preload="auto">
+            <source src="ImagenesPersion/persion2.mp4" type="video/mp4">
+        </video>
     </div>
+    <p>Anillo de plata con diamante incrustado en forma</p>
+</div>
 
-    <div class="item">
+<div class="item">
+    <div class="media">
         <img src="ImagenesPersion/persion3.jpg" alt="">
-		<p>anillo de acero inoxidable angelical edition</p>
+        <video muted loop playsinline preload="auto">
+            <source src="ImagenesPersion/persion2.mp4" type="video/mp4">
+        </video>
     </div>
+    <p>Anillo de acero inoxidable angelical edition</p>
+</div>
 
-    <div class="item">
+<div class="item">
+    <div class="media">
         <img src="ImagenesPersion/persion4.jpg" alt="">
-        <p>anillo de plata de ley "cristiandoll" hecho para @estasquecomo</p>
+        <video muted loop playsinline preload="auto">
+            <source src="ImagenesPersion/persion1.mp4" type="video/mp4">
+        </video>
     </div>
+    <p>Anillo de plata de ley "cristiandoll" hecho para @estasquecomo</p>
+</div>
 
-    <div class="item">
+<div class="item">
+    <div class="media">
         <img src="ImagenesPersion/persion5.jpg" alt="">
-		<p>anillo de plata "la ocasión" inspirado en san pedro</p>
+        <video muted loop playsinline preload="auto">
+            <source src="ImagenesPersion/persion2.mp4" type="video/mp4">
+        </video>
     </div>
+    <p>Anillo de plata "la ocasión" inspirado en san pedro</p>
+</div>
 
-    <div class="item">
+<div class="item">
+    <div class="media">
         <img src="ImagenesPersion/persion6.jpg" alt="">
-		<p>anillo chromehearts by ManuelEugercios</p>
+        <video muted loop playsinline preload="auto">
+            <source src="ImagenesPersion/persion1.mp4" type="video/mp4">
+        </video>
     </div>
+    <p>Anillo chromehearts by ManuelEugercios</p>
+</div>
 
-    <div class="item">
+<div class="item">
+    <div class="media">
         <img src="ImagenesPersion/persion7.jpg" alt="">
-		<p>anillo triple barrabassssado</p>
+        <video muted loop playsinline preload="auto">
+            <source src="ImagenesPersion/persion2.mp4" type="video/mp4">
+        </video>
     </div>
+    <p>Anillo triple barrabassssado</p>
+</div>
+
+<div class="item">
+    <div class="media">
+        <img src="ImagenesPersion/persion8.jpg" alt="">
+        <video muted loop playsinline preload="auto">
+            <source src="ImagenesPersion/persion1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <p>Anillo</p>
+</div>
 
 </main>
+<script>
+document.querySelectorAll('.item').forEach(item => {
+    const video = item.querySelector('video');
+    const img = item.querySelector('img');
 
+    // DESKTOP: hover
+    item.addEventListener('mouseenter', () => {
+        if (window.matchMedia('(hover: hover)').matches) {
+            img.style.opacity = 0;
+            video.style.opacity = 1;
+            video.currentTime = 0;
+            video.play();
+        }
+    });
+
+    item.addEventListener('mouseleave', () => {
+        if (window.matchMedia('(hover: hover)').matches) {
+            video.pause();
+            video.currentTime = 0;
+            video.style.opacity = 0;
+            img.style.opacity = 1;
+        }
+    });
+
+    // MÓVIL: tap
+    item.addEventListener('click', () => {
+        if (!window.matchMedia('(hover: hover)').matches) {
+
+            // Pausar otros vídeos
+            document.querySelectorAll('.item video').forEach(v => {
+                if (v !== video) {
+                    v.pause();
+                    v.currentTime = 0;
+                    v.style.opacity = 0;
+                    v.closest('.item').querySelector('img').style.opacity = 1;
+                }
+            });
+
+            img.style.opacity = 0;
+            video.style.opacity = 1;
+            video.currentTime = 0;
+            video.play();
+        }
+    });
+});
+</script>
 </body>
 </html>
