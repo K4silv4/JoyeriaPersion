@@ -149,6 +149,29 @@ button:hover {
     opacity: 0.85;
 }
 
+/* Enlaces generales del formulario */
+.contact-form a {
+    color: #b68f40; /* dorado elegante */
+    text-decoration: none; /* quita el subrayado */
+    transition: color 0.3s ease;
+}
+
+.contact-form a:hover {
+    color: #ffd700; /* dorado más brillante al pasar el ratón */
+    text-decoration: underline; /* opcional para indicar hover */
+}
+
+/* Si quieres que también los enlaces de la información de contacto cambien */
+.contact-info a {
+    color: #b68f40;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffd700;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .container {
