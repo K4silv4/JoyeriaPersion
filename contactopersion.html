@@ -67,13 +67,18 @@
     </label>
 
     <label class="checkbox">
-        <input type="checkbox" required>
-        He podido leer y entiendo la
-        <a href="#">Política de privacidad</a> y
-        <a href="#">cookies</a>.
+    <input type="checkbox" name="privacy" required>
+    He leído y acepto la
+    <a href="politica-privacidad.html" target="_blank">Política de privacidad</a>
     </label>
 
     <button type="submit">CONTACTAR</button>
+	
+	<input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde Persion">
+    <input type="hidden" name="_template" value="table">
+	<input type="hidden" name="_next" value="gracias.html">
+	
 </form>
     </div>
 
